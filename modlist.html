@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CXD's Website</title>
+    <style>
+        body {
+            background-color: #808080;
+            margin: 0;
+            font-family: Lemon;
+        }
+        header {
+            background: #5f5f5f;
+            padding: 15px;
+            text-align: center;
+        }
+        header a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        header a.active {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        header a[href="https://modrinth.com/user/CalinXD"] {
+            color: #1BD96A; /* Always green */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 15vh;
+            font-size: 3rem;
+            color: #231313;
+        }
+        ul {
+            width: 60%;
+            margin: auto;
+            font-size: 1.4rem;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+            background: #bfbfbf;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .mod-name {
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin: 0;
+        }
+        .mod-desc {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #222;
+        }
+        .download-link {
+            color: #107F3C;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+		.download-link-own {
+            color: #0094FF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* 🎨 Individual mod colors */
+        .poses .mod-name { color: #FCFF56; }
+        .strongheld .mod-name { color: #111F3D; }
+        .roles .mod-name { color: #896C37; }
+        .trigonogone .mod-name { color: #000000; }
+        .ravens .mod-name { color: #0E4217; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="modlist.html">Mod List</a>
+        <a href="wiki.html">Mod Wiki</a>
+        <a href="https://modrinth.com/user/CalinXD">Modrinth Profile</a>
+    </header>
+    
+    <script>
+        const links = document.querySelectorAll("header a");
+        const current = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+            if (link.getAttribute("href") === current) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <h1>Mod List</h1>
+    <ul>
+        <li class="ravens">
+            <p class="mod-name">Ravens & Deliveries</p>
+            <p class="mod-desc">A mod for Minecraft that adds ravens that can deliver Bundles.</p>
+            <a href="ravens.html" class="download-link-own">Download on the Wiki</a>
+        </li>
+        <li class="poses">
+            <p class="mod-name">Poses</p>
+            <p class="mod-desc">A Mod that allows you to Express yourself, with your hands.</p>
+            <a href="https://modrinth.com/mod/poses" class="download-link">Download on Modrinth</a>
+        </li>
+        <li class="strongheld">
+            <p class="mod-name">Strongheld</p>
+            <p class="mod-desc">A Mod that Limits the Max amount of Strongholds in World to three.</p>
+            <a href="https://modrinth.com/mod/strongheld" class="download-link">Download on Modrinth</a>
+        </li>
+        <li class="roles">
+            <p class="mod-name">Roles Among the Train</p>
+            <p class="mod-desc">An Addon Mod to The Last Voyage of the Harpy Express, that adds more Roles to the game.</p>
+            <a href="https://modrinth.com/mod/roles-among-the-train" class="download-link">Download on Modrinth</a>
+        </li>
+        <li class="trigonogone">
+            <p class="mod-name">Trigonogone</p>
+            <p class="mod-desc">A Mod that inverts the sine and cosine functions.</p>
+            <a href="https://modrinth.com/mod/trigonogone" class="download-link">Download on Modrinth</a>
+        </li>
+    </ul>
+</body>
+</html>

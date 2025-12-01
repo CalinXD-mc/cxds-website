@@ -1,0 +1,85 @@
+<!-- Mini Mod Wiki Page (wiki.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CXD's Website</title>
+    <style>
+        body {
+            background-color: #808080;
+            margin: 0;
+            font-family: Lemon;
+        }
+        header {
+            background: #5f5f5f;
+            padding: 15px;
+            text-align: center;
+        }
+        header a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 15vh;
+            font-size: 3rem;
+            color: #231313;
+        }
+            header a.active {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+		header a[href="https://modrinth.com/user/CalinXD"] {
+			color: #1BD96A;
+		}
+    </style>
+</head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravens & Deliveries Wiki</title>
+    <style>
+        body { background-color: #808080; margin: 0; font-family: Lemon; }
+        h1 { text-align: center; margin-top: 10vh; font-size: 3rem; }
+        .box { width: 60%; margin: 40px auto; background: #bfbfbf; padding: 20px; border-radius: 10px; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+	<header>
+		<a href="index.html">Home</a>
+		<a href="modlist.html">Mod List</a>
+		<a style="color: white; text-decoration: underline; font-weight: bold;" href="wiki.html">Mod Wiki -> Ravens & Deliveries</a>
+		<a href="https://modrinth.com/user/CalinXD">Modrinth Profile</a>
+	</header>
+	
+	<script>
+		const links = document.querySelectorAll("header a");
+		const current = window.location.pathname.split("/").pop();
+
+		links.forEach(link => {
+			if (link.getAttribute("href") === current) {
+				link.classList.add("active");
+			}
+		});
+	</script>
+    <h1>Ravens & Deliveries Wiki</h1>
+    <div class="box">
+        <h2>Ravens</h2>
+        <p>Ravens are the new Mob that the mod adds. They can be found in Forests and they're tamed with seeds.</p>
+		<h2>Using the Ravens</h2>
+        <p>The Main use of the Raven is it's delivering capabilities. Right click a Raven with a Bundle that has the name of another Online player, and the Raven will deliver the bundle.</p>
+		<h2 style="color:#380000;" >Download</h2>
+        <p style="color:#7F0000;" >The current version of the mod uses some assets from another mod, thus it couldn't be publised on Modirinth. If you really want to play with the mod before it gets revamped you can download it from below.</p>
+		<a href="files/raven_delivery-1.0-1.21.1.jar" download 
+			style="color:#0094FF; text-decoration: underline; font-weight: bold;">
+			Download 1.21.1
+		</a>
+    </div>
+</body>
+</html>
+
+</html>

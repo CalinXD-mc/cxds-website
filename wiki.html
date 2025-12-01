@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CXD's Website</title>
+    <style>
+        body {
+            background-color: #808080;
+            margin: 0;
+            font-family: Lemon;
+        }
+        header {
+            background: #5f5f5f;
+            padding: 15px;
+            text-align: center;
+        }
+        header a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        header a.active {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        header a[href="https://modrinth.com/user/CalinXD"] {
+            color: #1BD96A; /* Always green */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 10vh;
+            font-size: 3rem;
+            color: #231313;
+        }
+        ul {
+            width: 60%;
+            margin: 40px auto;
+            font-size: 1.4rem;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+            background: #bfbfbf;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        li a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #0094FF;
+        }
+        li p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="modlist.html">Mod List</a>
+        <a href="wiki.html">Mod Wiki</a>
+        <a href="https://modrinth.com/user/CalinXD">Modrinth Profile</a>
+    </header>
+
+    <script>
+        const links = document.querySelectorAll("header a");
+        const current = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+            if (link.getAttribute("href") === current) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <h1>Mini Mod Wiki</h1>
+    <ul>
+        <li>
+            <a href="ravens.html">Ravens & Deliveries</a>
+            <p>Learn how Ravens work, how to tame them, and use them for bundle deliveries.</p>
+        </li>
+    </ul>
+</body>
+</html>
