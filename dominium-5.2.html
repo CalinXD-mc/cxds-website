@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominium Wiki</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <style>
+        body { 
+            background-color: #808080; 
+            margin: 0; 
+            font-family: Lemon; 
+        }
+        header {
+            background: #5f5f5f;
+            padding: 15px;
+            text-align: center;
+        }
+        header a {
+            margin: 0 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        header a.active {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        header a[href="https://modrinth.com/user/CalinXD"] {
+            color: #1BD96A;
+        }
+        h1 { 
+            text-align: center; 
+            margin-top: 10vh; 
+            font-size: 3rem; 
+            color: #231313;
+        }
+        .box { 
+            width: 60%; 
+            margin: 40px auto; 
+            background: #bfbfbf; 
+            padding: 20px; 
+            border-radius: 10px; 
+            font-size: 1.2rem; 
+        }
+        .box h2 {
+            color: #0C7172;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .box h3 {
+            color: #3d3d3d;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .box h4 {
+            color: #5a5a5a;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        .box p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .box ul {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        .box li {
+            margin: 8px 0;
+        }
+        
+        details {
+            margin: 20px 0;
+            background: #a8a8a8;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+
+        summary {
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            color: #0C7172;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary {
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="modlist.html">Mod List</a>
+        <a class="active" href="wiki.html">Mod Wiki -> Dominium</a>
+        <a href="posting.html">CXD Posting</a>
+        <a href="https://modrinth.com/user/CalinXD">Modrinth Profile</a>
+    </header>
+    
+    <script>
+        const links = document.querySelectorAll("header a");
+        const current = window.location.pathname.split("/").pop();
+        links.forEach(link => {
+            if (link.getAttribute("href") === current) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <h1>Dominium Wiki</h1>
+    
+    <div class="box">
+        <details>
+            <summary>1. Core Magic Systems</summary>
+            
+            <h3>I. Soul Magic</h3>
+            <ul>
+                <li>Uses contracts as the main method of manipulation.</li>
+                <li>Its Orb is obtained by killing a player on soul sand.</li>
+                <li>Has to do with the Devices & Land Claim part of the Dominium.</li>
+            </ul>
+            
+            <h3>II. Dominic Magic</h3>
+            <ul>
+                <li>Uses Dominic Items as the main method of manipulation.</li>
+                <li>Its Orb isn't obtainable in Survival.</li>
+                <li>Has to do with the Weaponry & Perma-Kill part of the Dominium.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>2. Signable Items</summary>
+            
+            <h3>I. Contracts</h3>
+            <p>The most basic tool that can be used to trade Souls. It can only be used on Soul Devices. Gets consumed on use.</p>
+            
+            <h3>II. Dominic Contracts</h3>
+            <p>An advanced version of the Contract. It doesn't get consumed on Soul Devices. It also has special properties and ways to control The Signer.</p>
+            
+            <h3>III. Wanderer's Tablet</h3>
+            <p>A unique type of signable item. It's obtained by trading with Wandering Traders. It can be duplicated in a Crafting Table. Its purpose is to be used with the Waystone to create a TPA-like system.</p>
+        </details>
+
+        <details>
+            <summary>3. Soul Magic Devices</summary>
+            
+            <h3>I. The Waystone</h3>
+            <p>It's a teleportation device that requires a Contract or a Wandering Tablet, along with XP, to function. Right-click it with a Contract and it will cost you XP to use. Right-click it with a Wandering Tablet and it will cost the bound player XP to use. The bound player must also be sneaking when it is activated.</p>
+            
+            <h3>II. The Idol</h3>
+            <p>The Idol protects the player who placed it from direct attacks by others bound to them through contracts, within a 96×96 block area centered on the Idol's position.</p>
+            
+            <h3>IV. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+			
+            <h3>IV. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+            
+            <h3>IV. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+			
+            <h3>VI. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+            
+            <h3>VII. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+        </details>
+
+        <details>
+            <summary>4. Dominic Weapons</summary>
+            
+            <h3>I. The Eternal Divinity</h3>
+            <p>Has 3 uses. For the first two uses, whenever you have it in your inventory and kill a player, that player will be temporarily set to Spectator mode. On the last use, the killed player will be permanently set to Spectator.</p>
+            
+            <h3>II. The Broken Eternal Divinity</h3>
+            <p>Has unlimited uses. Exiles players 7,777,777 blocks away from spawn (configurable).</p>
+            
+            <h3>III. The Soultrap Spetum</h3>
+            <p>A Dominic weapon that doesn't allow for perma-killing, making it weaker among other weapons.</p>
+            
+            <h3>IV. The Gilded Onyx</h3>
+            <p>A sword with unlimited uses. Whenever you kill a player with it, the player will be chained. Right-clicking the chains perma-kills the player.</p>
+            
+            <h3>V. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+            
+            <h3>VI. [REDACTED]</h3>
+            <p><em>Coming soon...</em></p>
+        </details>
+
+        <details>
+            <summary>5. Factions</summary>
+            
+            <h3>What are Factions?</h3>
+            <p>Factions are Dominium's way of making teams in survival. They allow players to form alliances, prevent friendly fire, and communicate with faction-wide messages.</p>
+            
+            <h3>Creating a Faction</h3>
+            <p>To create a faction, use <strong>/faction create &lt;faction_name&gt;</strong>. The creator becomes the faction owner and has exclusive rights to manage the faction.</p>
+            
+            <h3>Joining a Faction</h3>
+            <p>Players can only join factions through invitations. The faction owner uses <strong>/faction invite &lt;player&gt;</strong> to send an invite. The invited player then uses <strong>/faction accept</strong> to join.</p>
+            
+            <h3>Faction Commands</h3>
+            <ul>
+                <li><strong>/faction create &lt;faction_name&gt;</strong> - Creates a new faction</li>
+                <li><strong>/faction invite &lt;player&gt;</strong> - Invites a player to your faction (owner only)</li>
+                <li><strong>/faction accept</strong> - Accepts a pending faction invitation</li>
+                <li><strong>/faction leave</strong> - Leaves your current faction (non-owners only)</li>
+                <li><strong>/faction kick &lt;player&gt;</strong> - Removes a player from your faction (owner only)</li>
+                <li><strong>/faction rename &lt;new_name&gt;</strong> - Renames your faction (owner only)</li>
+                <li><strong>/faction pvp &lt;true/false&gt;</strong> - Toggles PVP between faction members (owner only)</li>
+                <li><strong>/faction message &lt;message&gt;</strong> - Sends a message to all online faction members</li>
+                <li><strong>/faction disband</strong> - Disbands your faction (owner only)</li>
+                <li><strong>/faction list</strong> - Lists all existing factions</li>
+                <li><strong>/faction info &lt;faction_name&gt;</strong> - Shows detailed information about a faction</li>
+            </ul>
+        </details>
+		
+		<details>
+            <summary>6. The Nether Roof</summary>
+            
+            <h3>What's up with the Nether Roof?</h3>
+            <p>The Nether Roof is Dominium's way of messing with Netherite farming. It's no longer a vast, empty expanse, but instead an abandoned complex that delivers a strong "you shouldn't be here" vibe. The roof is no longer illuminated and lacks the light and warmth of the Nether, feeling like a cold, dark, abandoned place.</p>
+            
+			<h3>Structures & Exploration</h3>
+            <p>The Nether Roof contains new structures where you can find Suspicious Soul Sand and other valuable loot. These abandoned structures add to the eerie atmosphere and provide rewards for brave explorers willing to face the Rooflings and navigate the darkness.</p>
+			
+            <h3>Rooflings</h3>
+            <p>The Rooflings are hallucinations invoked by the eerie atmosphere of the Roof. They have only one purpose: to kick players out of the Roof. When a Roofling hits a player, the player will start phasing through the ground until reaching a safe surface. If the player falls into the void, they will be teleported high above the Nether Roof.</p>
+            
+            <h3>Suspicious Soul Sand</h3>
+            <p>Suspicious Soul Sand can be found in structures above the Roof. Brush through it to uncover valuable items, including Netherite and The Necklaces. It drops many useful items that make exploring the dangerous Nether Roof worthwhile.</p>
+            
+            <h3>The Necklaces</h3>
+            <p>The Necklaces have one simple purpose: letting the player experience the world as a certain mob type. These are trinket items that grant unique abilities with trade-offs:</p>
+            <ul>
+                <li><strong>Undead Necklace:</strong> Makes you immune to hunger, but you will burn in the sun. If you are wearing a helmet, you will instead be slowed while in sunlight.</li>
+                <li><strong>Arachnid Necklace:</strong> Allows you to climb walls and grants Night Vision, but makes you weak while exposed to the sun.</li>
+                <li><strong>Ethereal Necklace:</strong> Allows you to see through darkness, but makes you extremely vulnerable to Rooflings.</li>
+            </ul>
+            <p>More necklaces will likely be added in future updates.</p>
+        </details>
+
+        <details>
+			<summary>7. Misc</summary>
+			<h3>The Soul Candle</h3>
+			<p>A block that prevents mobs from spawning in a 64-block radius. (Configurable)</p>
+			<h3>Soul Glass</h3>
+			<p>A glass variant that can be turned on and off, and that triggers a chain reaction that turns on and off any neighboring Soul Glass blocks.</p>
+			<h3>Ghosts</h3>
+			<p>You can use /dominium:ghost (add, clear, list, remove) to add a player as a ghost. Ghosts are invisible beings with increased stealth that can only be seen in the corner of the screen. If you're a ghost, you can hold a Dominic Effigy in your main hand or offhand to become completely visible or invisible.</p>
+			<h3>The Item Marker</h3>
+			<p>You can use /dominium:marker (clear, get, set) while holding an Item Marker to set its text. Example: /dominium:marker set Given by CalinXD</p>
+			<p>When holding this item in your main hand, and most Dominic weapons or items in your offhand, you can add the text from the Item Marker as lore to the Dominic weapon or item.</p>
+			<h3>Spectator+</h3>
+			<p>When you're in spectator mode, you can now interact with some blocks such as doors, trapdoors, buttons, bells, and more!</p>
+		</details>
+		<h4>This Wiki will be expanded with the 0.6 release.</h4>
+    </div>
+</body>
+</html>
